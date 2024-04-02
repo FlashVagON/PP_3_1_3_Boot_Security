@@ -56,11 +56,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //        return new InMemoryUserDetailsManager(user);
 //    }
 
-    @Bean
-    @Override
-    public UserDetailsService userDetailsService() {
-        return userService;
-    }
+//    @Bean
+//    @Override
+//    public UserDetailsService userDetailsService() {
+//        return userService;
+//    }
 
     @Autowired
     protected void configureAuth(AuthenticationManagerBuilder auth) throws Exception {
