@@ -129,5 +129,31 @@ public class User implements UserDetails {
     public String getPassword() {
         return password;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        User user = (User) o;
+
+        if (age != user.age) return false;
+        if (!id.equals(user.id)) return false;
+        if (!name.equals(user.name)) return false;
+        if (surname != null ? !surname.equals(user.surname) : user.surname != null) return false;
+        if (!password.equals(user.password)) return false;
+        return roles != null ? roles.equals(user.roles) : user.roles == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id.hashCode();
+        result = 31 * result + name.hashCode();
+        result = 31 * result + (surname != null ? surname.hashCode() : 0);
+        result = 31 * result + age;
+        result = 31 * result + password.hashCode();
+        result = 31 * result + (roles != null ? roles.hashCode() : 0);
+        return result;
+    }
 }
 

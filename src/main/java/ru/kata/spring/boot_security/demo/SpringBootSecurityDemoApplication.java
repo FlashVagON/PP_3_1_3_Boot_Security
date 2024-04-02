@@ -1,12 +1,7 @@
 package ru.kata.spring.boot_security.demo;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import ru.kata.spring.boot_security.demo.model.User;
-import ru.kata.spring.boot_security.demo.service.UserServiceImpl;
 
 @SpringBootApplication
 public class SpringBootSecurityDemoApplication {
@@ -21,7 +16,9 @@ public class SpringBootSecurityDemoApplication {
     public static void main(String[] args) {
 		SpringApplication.run(SpringBootSecurityDemoApplication.class, args);
 
-//        userService.addUser(new User("user1", "us1", 44, "123"));
+//        userService.addUser(new User("admin", "ad", 23, "123"));
+//		userService.addUser(new User("user", "us", 31, "123"));
+//		userService.addUser(new User("user2", "us2", 25, "123"));
 	}
 
 }
